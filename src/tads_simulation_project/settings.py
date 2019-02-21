@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qehjdz#!954g$eu4@(hemu9#&dlx4^ibpfc8vfrtjuc2mszd10'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -74,18 +74,34 @@ WSGI_APPLICATION = 'tads_simulation_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+
+# local DB settings
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'sql_server.pyodbc',
+#         'NAME': 'djangoTadsDb',
+#         'USER': 'azureuser',
+#         'PASSWORD': 'Azure1234567',
+#         'HOST': 'sampletadssqlserver.database.windows.net',
+#         'PORT': '',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         }
+#     }
+# }
+
+
+# Production DB settings
 DATABASES = {
-    'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'djangoTadsDb',
-        'USER': 'azureuser',
-        'PASSWORD': 'Azure1234567',
-        'HOST': 'sampletadssqlserver.database.windows.net',
-        'PORT': '',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        }
-    }
+   'default': {
+   'ENGINE': 'django.db.backends.postgresql_psycopg2',
+   'NAME': os.environ.get('DATABASENAME', ''),
+   'USER': os.environ.get('DATABASEUSER', ''),
+   'PASSWORD': os.environ.get('DATABASEPASSWORD', ''),
+   'HOST': os.environ.get('DATABASEHOST', ''),
+   'PORT': '5432',
+  }
 }
 
 
@@ -115,7 +131,7 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
+nUSE_I18N = True
 
 USE_L10N = True
 

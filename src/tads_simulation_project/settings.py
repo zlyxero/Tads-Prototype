@@ -75,22 +75,6 @@ WSGI_APPLICATION = 'tads_simulation_project.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 
-# local DB settings
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'sql_server.pyodbc',
-#         'NAME': 'djangoTadsDb',
-#         'USER': 'azureuser',
-#         'PASSWORD': 'Azure1234567',
-#         'HOST': 'sampletadssqlserver.database.windows.net',
-#         'PORT': '',
-#         'OPTIONS': {
-#             'driver': 'ODBC Driver 17 for SQL Server',
-#         }
-#     }
-# }
-
 
 # Production DB settings
 DATABASES = {

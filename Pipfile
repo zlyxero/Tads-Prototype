@@ -9,6 +9,7 @@ pyodbc = "*"
 django-pyodbc-azure = "*"
 pipenv-to-requirements = "*"
 whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 

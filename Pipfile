@@ -8,6 +8,7 @@ django = "*"
 pyodbc = "*"
 django-pyodbc-azure = "*"
 pipenv-to-requirements = "*"
+whitenoise = "*"
 
 [dev-packages]
 

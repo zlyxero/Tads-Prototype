@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'tads_simulation_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-# Production DB settings
+# azure mysql DB settings
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'sql_server.pyodbc',
@@ -93,18 +93,15 @@ WSGI_APPLICATION = 'tads_simulation_project.wsgi.application'
 #     }
 # }
 
+# azure postgresql settings
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'djangoTadsDb',
-        'USER': 'azureuser',
-        'PASSWORD': 'Azure1234567',
-        'HOST': 'sampletadssqlserver.database.windows.net',
-        'PORT': '',
-        'OPTIONS': {
-            'host_is_server': False,
-            'driver': 'FreeTDS'
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'tadssimpostgresqldb',
+        'USER':'postgresqldbuser@webapp-postgresqldbserver-cfe49dea-14351',
+        'PASSWORD': 'Tads1234',
+        'HOST': 'webapp-postgresqldbserver-cfe49dea-14351.postgres.database.azure.com',
+        'PORT': ''
     }
 }
 

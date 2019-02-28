@@ -102,9 +102,8 @@ DATABASES = {
         'HOST': 'sampletadssqlserver.database.windows.net',
         'PORT': '',
         'OPTIONS': {
-            'driver': 'SQL Server Native Client 11.0',
-            'MARS_Connection' : True,
-            'driver_supports_utf8' : True,
+            'host_is_server': False,
+            'driver': 'FreeTDS'
         }
     }
 }

@@ -6,7 +6,7 @@ from django.views import View
 
 def analytics(request):
 	''' display Power BI Embeded report '''
-	return render(request, 'tads_simulator/analytics.html', {'page_title': 'Analytics'})
+	return render(request, 'tads_simulator/analytics.html', {'page_title': 'Sample Analytics'})
 
 class AddProject(View):
 	''' display a form to add a new project'''

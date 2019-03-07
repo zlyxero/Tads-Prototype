@@ -1,0 +1,16 @@
+.navbar{
+	background-color: #01B8AA;
+}
+
+.navbar.top_bar_ribbon{
+	background-color: #F2C80F;
+}
+
+.spaced_content{
+	padding: 100px 50px;
+}
+
+.spaced_content_centerd{
+	text-align: center;
+	padding: 100px 0;
+}

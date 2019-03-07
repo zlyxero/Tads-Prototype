@@ -12,6 +12,7 @@ whitenoise = "*"
 gunicorn = "*"
 django-heroku = "*"
 psycopg2 = "*"
+django-widget-tweaks = "*"
 
 [dev-packages]
 

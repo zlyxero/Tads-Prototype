@@ -6,7 +6,7 @@ from django.views import View
 
 def analytics(request):
 	''' display Power BI Embeded report '''
-	return render(request, 'tads_simulator/analytics.html', {})
+	return render(request, 'tads_simulator/analytics.html', {'page_title': 'Analytics'})
 
 class AddProject(View):
 	''' display a form to add a new project'''
@@ -14,7 +14,7 @@ class AddProject(View):
 	def get(self, request):
 		form = 	ProjectsForm()
 
-		return render(request, 'tads_simulator/projectsForm.html', {'form':form})
+		return render(request, 'tads_simulator/projectsForm.html', {'form':form, 'page_title': 'Submit Project'})
 
 	def post(self, request):
 		
@@ -26,7 +26,7 @@ class AddProject(View):
 			return redirect('analytics')
 
 		else:
-			return render(request, 'tads_simulator/projectsForm.html', {'form':form})
+			return render(request, 'tads_simulator/projectsForm.html', {'form':form, 'page_title': 'Submit Project'})
 
 
 
